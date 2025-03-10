@@ -1,0 +1,37 @@
+watermark:
+  output_height: 2000
+  normal:
+    handler: "process_normal_watermark"
+    npy_path: "watermark_normal_450"
+  foggy:
+    handler: "process_foggy_watermark"
+    npy_path: "watermark_foggy_450"
+watermark_types:
+  normal:
+    display: "正常"
+    handler: "process_normal_watermark"
+    npy_path: "watermark_normal_450"
+    params:
+      default_opacity:
+        label: "透明度"
+        type: int
+        required: false # 新增必填标记
+        min: 0
+        max: 100
+        default: 75
+      allowed_formats:
+        label: "允许格式"
+        type: list[str]
+        required: false
+        options: [ jpg, png ]
+        default: jpg
+
+  foggy:
+    display: "雾化"
+    handler: "process_foggy_watermark"
+    params:
+      default_font:
+        label: "默认字体"
+        type: str
+        required: false
+        default: "Arial"

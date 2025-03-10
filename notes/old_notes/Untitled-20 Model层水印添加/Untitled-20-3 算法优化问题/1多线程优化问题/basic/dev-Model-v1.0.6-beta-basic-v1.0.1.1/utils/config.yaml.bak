@@ -1,0 +1,10 @@
+spacing: 450
+opacity: 30
+shadow_opacity: 10
+line_width: 8
+foggy_line_width: 0
+dash_length: 20
+quality: 30
+
+crop:
+  output_width: 1000
